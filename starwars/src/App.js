@@ -43,7 +43,7 @@ function App() {
     <AppContainer>
       <div className = "character-list">
         <PageHeader>React Wars</PageHeader>
-       {data.map(() => {
+       {data.map((props) => {
 
        }}
 
@@ -53,3 +53,8 @@ function App() {
 }
 
 export default App;
+
+
+response.data => data.name
+                  data.homeworld
+                  data.mass
