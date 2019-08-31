@@ -6,41 +6,25 @@ const Container = styled.div`
     font-size: 62.5%;
     display: flex;
     flex-direction: column;
-    width: 60%;
-    justify-content: center;
-    text-align: center;
+    width: auto;
+    justify-content: flex-start;
     align-items: center;
-    margin: 0 auto;
-    color: white;
+    
+    color: black;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    border: .2rem solid white
+    border-radius: 1rem;
+    padding: .5rem;
     
 `;
 
-function Card(props) {
-
-    return (
-    <Container>
-     <h2>{props.name}</h2>
-     <ul>
-         <li>{props.</li>
-     </ul>
-    </Container>
-    );
-}
 
 
+// const Card = (props) => {
+//     return (
+//             
+// );
+// }
 
-export default Card;
-
-
-
-
-
-// function ImageCard(props) {
-//     const type = () => {
-//         if (props.mediaType === 'image'){
-//             return (
-//                 <div className = 'image-card'>
-//                     <img src={props.url}></img> 
-//                 </div>
-//                 );
-//         } 
+// export default Card;
