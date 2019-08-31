@@ -16,10 +16,14 @@ function App() {
       .catch(function(error) {
         console.log(error)
       });
-  }, [])
+  }, [{/*This is where I'd set my dependency if I want to update thise based on a new page of data*/}])
   
-  const addCard = (props) => {
 
+  //I want to add the ability to set up a card for each item in the array of objects.
+  const addCard = (props) => {
+    data.forEach() => {
+      props.name = {data.name};
+    }
   }
 
   const AppContainer = styled.div`
@@ -32,12 +36,16 @@ function App() {
 
   return (
     <AppContainer>
-      <div>
-        <h1>Hello</h1>
-        {/* <CharacterCard
-          name = {data.name}
-
-          /> */}
+      <div className = "character-list">
+        <h1>React Wars</h1>
+        <CharacterCard 
+            name = {data.name}
+            gender = {data.gender}
+            hairColor = {data.hair_color}
+            height = {data.height}
+            mass = {data.mass}
+            homeworld = {data.homeworld}
+          />
       </div> 
     </AppContainer>
   );

@@ -16,10 +16,13 @@ const Container = styled.div`
 `;
 
 function Card(props) {
-    
+
     return (
     <Container>
-     <h2>Have some data</h2>
+     <h2>{props.name}</h2>
+     <ul>
+         <li>{props.</li>
+     </ul>
     </Container>
     );
 }
