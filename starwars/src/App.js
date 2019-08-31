@@ -1,18 +1,38 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import Container from './src/src/Card Element/card.js'
+import styled from 'styled-components'
+import axios from 'axios'
 import './App.css';
 
-const App = () => {
-  // Try to think through what state you'll need for this app before starting. Then build out
-  // the state properties here.
+function App() {
+  const [data, setData] = useState({}); //stateful variable. Should contain the response.data object so we have access to ALL the keys inside it.
+  
+  useEffect(() => {
+    axios.get('https://swapi.co/api/?format=json')
+      .then(response =>  {
+        console.log(response.data);
+        setData(response.data)
+      })
+      .catch(function(error) {
+        console.log(error)
+      });
+  }, [])
+  
+  const AppContainer = styled.div`
+  
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 2.5rem;
 
-  // Fetch characters from the star wars api in an effect hook. Remember, anytime you have a 
-  // side effect in a component, you want to think about which state and/or props it should
-  // sync up with, if any.
+  `;
+
 
   return (
-    <div className="App">
-      <h1 className="Header">React Wars</h1>
-    </div>
+    <AppContainer>
+      <Container>
+
+      </Container>
+    </AppContainer>
   );
 }
 
