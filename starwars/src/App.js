@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Container from './src/src/Card Element/card.js'
+// import Container from './src/src/Card Element/card.js'
 import styled from 'styled-components'
 import axios from 'axios'
 import './App.css';
@@ -8,16 +8,20 @@ function App() {
   const [data, setData] = useState({}); //stateful variable. Should contain the response.data object so we have access to ALL the keys inside it.
   
   useEffect(() => {
-    axios.get('https://swapi.co/api/?format=json')
+    axios.get('https://swapi.co/api/people/?format=json')
       .then(response =>  {
-        console.log(response.data);
-        setData(response.data)
+        console.log(response.data.results);
+        setData(response.data.results)
       })
       .catch(function(error) {
         console.log(error)
       });
   }, [])
   
+  const addCard = (props) => {
+
+  }
+
   const AppContainer = styled.div`
   
     width: 70%;
@@ -26,12 +30,15 @@ function App() {
 
   `;
 
-
   return (
     <AppContainer>
-      <Container>
+      <div>
+        <h1>Hello</h1>
+        {/* <CharacterCard
+          name = {data.name}
 
-      </Container>
+          /> */}
+      </div> 
     </AppContainer>
   );
 }

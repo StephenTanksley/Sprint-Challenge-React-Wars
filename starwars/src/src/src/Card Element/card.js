@@ -16,11 +16,10 @@ const Container = styled.div`
 `;
 
 function Card(props) {
+    
     return (
     <Container>
-        <h2 className = 'header'>Some Data</h2>
-        <h3 className = 'copyright'>Some Other Data</h3>
-        <p className = 'explanation-text'>Some DataFinal</p>
+     <h2>Have some data</h2>
     </Container>
     );
 }
@@ -28,3 +27,17 @@ function Card(props) {
 
 
 export default Card;
+
+
+
+
+
+// function ImageCard(props) {
+//     const type = () => {
+//         if (props.mediaType === 'image'){
+//             return (
+//                 <div className = 'image-card'>
+//                     <img src={props.url}></img> 
+//                 </div>
+//                 );
+//         } 
